@@ -1,7 +1,7 @@
 # meet-me-in-the-middle
 
 <p align="left">
-  <img width=40% src="https://raw.githubusercontent.com/andrew-curthoys//meet-me-in-the-middle/master/docs/meet_me_logo.png">
+  <img width=20% src="https://raw.githubusercontent.com/andrew-curthoys/meet-me-in-the-middle/master/docs/meet_me_logo.png">
 </p>
 
 ![PyPI - License](https://img.shields.io/pypi/l/meetme)
