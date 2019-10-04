@@ -7,7 +7,7 @@ class FlightFrame:
     def __init__(self, api_key, api_secret):
         # initialize the class by getting a token from Amadeus
         # you'll need to pass in your API key & API secret supplied by Amadeus
-        self.endpoint = "https://test.api.amadeus.com/v1/security/oauth2/token"
+        self.endpoint = "https://api.amadeus.com/v1/security/oauth2/token"
         self.token_data = {
             'grant_type': 'client_credentials',
             'client_id': api_key,
@@ -27,7 +27,7 @@ class FlightFrame:
     
     def _get_response(self, origin, departureDate, duration, nonStop, oneWay):
         # set data to be used in API get call
-        url = r'https://test.api.amadeus.com/v1/shopping/flight-destinations'
+        url = r'https://api.amadeus.com/v1/shopping/flight-destinations'
         params = {
             'origin': origin,
             'departureDate': departureDate,
