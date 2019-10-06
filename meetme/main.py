@@ -58,6 +58,7 @@ class FlightFrame:
         response = self._get_response(origin, departureDate, duration, nonStop, oneWay)
         
         # get information on the flights from the desired origin
+        origins = self._get_flight_attribute(response, 'origin')
         destinations = self._get_flight_attribute(response, 'destination')
         departure_dates = self._get_flight_attribute(response, 'departureDate')
         return_dates = self._get_flight_attribute(response, 'returnDate')
@@ -65,6 +66,7 @@ class FlightFrame:
 
         # create a dictionary with the flight information to be stored in a Pandas DataFrame
         flight_dict = {
+                'origin': origins,
                 'destination': destinations,
                 'departure_date': departure_dates,
                 'return_date': return_dates,
@@ -72,6 +74,7 @@ class FlightFrame:
                 }
         
         flight_types = {
+                'origin': str,
                 'destination': str,
                 'departure_date': str,
                 'return_date': str,
